@@ -37,7 +37,7 @@ A small corner of the internet where I document the interesting and useful thing
 
 Since about 2002, Land Rovers have gotten increasingly more complex. More modules for more things, more ways to control how the vehicle behaves, how equipment is enabled/disabled, and so on. The L405 Range Rover is a great example of how just a bit of software tweaking can add a good deal of customization and features.
 
-This repo focuses mainly on **2013-2017 L405 Range Rover**, and occasionally will mention things of value to **2006-2009 L320 Range Rover Sport**. Some of the L405 stuff may apply to L494 Range Rover Sport, but I can't confirm it. Feel free to reach out if any of it does and I'll make a note of it here.
+This repo focuses mainly on **2013-2016.5 L405 Range Rover**, and occasionally will mention things of value to **2006-2009 L320 Range Rover Sport**. Some of the L405 stuff may apply to L494 Range Rover Sport, but I can't confirm it. Feel free to reach out if any of it does and I'll make a note of it here.
 
 <br />
 <hr>
@@ -59,14 +59,12 @@ Stupid reasons to make CCF changes:
 
 ## What tools are required?
 
-You have three options, year-dependent:  
+You have two options:  
 - **SDD** - *Jaguar/Land Rover Symptom Driven Diagnostics* software with a *JLR Mongoose OBD-II* interface  
 &bull; Works on MY2016.5 and earlier only. I sold mine to a friend who bought my L320.
-- **Pathfinder** - *Jaguar/Land Rover Pathfinder* software with the correct VCI and OBD-II interface cable  
-&bull; I don't have Pathfinder, none of my Rovers ever needed / supported it, and I know nothing about it. In short, you're on your own.  
 - **IID** - *GAP IID Tool*, either BT or Pro, with the correct version for your year of Land Rover  
 &bull; G3 for vehicles up to MY2016.5  
-&bull; G4 for vehicles MY2017 and later  
+&bull; G4 for vehicles MY2017 and later (which I largely don't cover in this guide because things moved to DoIP for MY2017 and lots has changed.)  
 &bull; In either instance, you'll need to contact GAP ahead of time and ask them for access to the Complete CCF file.
  
 <br />
