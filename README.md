@@ -8,13 +8,17 @@ description: Tips and Tweaks for the L405 Range Rover and L320 Range Rover Sport
 A small corner of the internet where I document the interesting and useful things I've learned with my L405 Range Rover and previous L320 Range Rover Sport.
 <br /><br />
 
-# List of RR stuff
+# Before we begin
 
 [What's this all about?](#whats-this-all-about)
 
 [A word on the vehicle Car Config File](#a-word-on-the-vehicle-car-config-file)
 
 [What tools are required?](#what-tools-are-required)
+
+<hr>
+
+# List of modifications
 
 [Firing the Seatbelt Nanny](#firing-the-seatbelt-nanny)
 
@@ -24,7 +28,9 @@ A small corner of the internet where I document the interesting and useful thing
 
 [Adding some athleticism to the big pudding - enabling Dynamic Terrain Response](#adding-some-athleticism-to-the-big-pudding---enabling-dynamic-terrain-response)
 
+[Keep your distance with Adaptive Cruise Control](#keep-your-distance-with-adaptive-cruise-control)
 
+<hr>
 <br />
 
 ## What's this all about?
@@ -147,6 +153,46 @@ Very cool, but you're probably thinking "How much does it cost to add the parts 
 But wait, how do I change into it if I don't have the appropriate Terrain Response control with the Dynamic icon? Easy. Take Terrain Response out of 'Auto' so that the normal Terrain Response mode is selected. Then turn the dial one click to the left, as though you're selecting the empty space beside normal mode. The instrument cluster will show you've selected Dynamic, the gauges and ambient lighting will turn red, and the Terrain Response control will not show any mode illuminated. You'll notice a difference on the road in short order.
 
 It's good... very good.
+
+<br />
+<hr>
+<br />
+
+## Keep your distance with Adaptive Cruise Control
+
+My L405 Range Rover was an interesting mix of options from the original owner. I have the top-end Meridien audio system, but no rear entertainment. I have massaging and heated/cooled front seats, but no four-zone climate or center fridge (peltier-based chiller yes, fridge no). Automatic high beam assist, blind spot monitoring, traffic sign recognition, and lane departure warning, but no adaptive cruise control (ACC).
+
+I have had my misgivings about ACC in the past with a Mercedes whose assist systems would occasionally be rendered useless by radio frequency interference on my drive out east to visit my parents from time to time, which would render the cruise control entirely inoperable including the inability to fall back to 'dumb' cruise. But I do still miss having the ability to let the car manage the distance so I just need to change lanes and let it resume the speed I set it to, rather than having to cancel the cruise lest I rear-end this dummy in front of me going 10-under.
+
+Enabling it does require physical parts, a CCF update, and a post-install calibration.
+
+**L405 Range Rover**
+
+Parts list:
+|Part Name|Part Number|Description|
+|:---|:---|:---|
+| Radar Unit (front Bumper Mounted), (adaptive cruise) | **LR062658** _(VIN:FA000001-GA999999)_ | This is the part that makes it possible for the vehicle to detect if it is approaching an object in front. As Land Rover have different P/Ns based on VIN seriesfor L405, check [Scuderia Car Parts](https://www.scuderiacarparts.com/part-finder/landrover/range-rover/oe/471/4471/82542) to confirm the part you can use. |
+| Radar sensor mounting bracket | &bull; **LR060076** _(VIN:to HA999999)_ *Mine <br /> &bull; **LR100509** _(VIN:JA000001-on)_ | Allows mounting the radar sensor to the cutout in the front impact bar behind the bumper cover. Your sensor may come with this included if you buy it second-hand. |
+| Hex bolts, M6 x 14MM | &bull; **RYG500160** | The bolts required to mount the radar sensor and bracket. |
+| Cruise Control Switch (steering wheel mounted) (adaptive cruise, heated wheel) | &bull; **LR087486** _(VIN:GA283361-HA999999)_| A new cruise control switch with the distance adjustment (left and right buttons) is needed to adjust the trailing distance between your vehicle and the one in front. I strongly advise confirming what P/N you need by checking [Scuderia Car Parts](https://www.scuderiacarparts.com/part-finder/landrover/range-rover/oe/471/4481/82930) based on what options you have fitted. |
+
+CCF edits required (choose **exactly these values** or it won't work):
+|CCF Property|Value|
+|:---|:---|
+| Speed control | Adaptive speed control is fitted |
+| Adaptive Speed Control ECU | North America, Canada, Mexico, Australia |
+| Adaptive Speed Control ECU | Standard blockage level -40dB |
+| Collision Mitigation By Braking | Fitted |
+| Standard Speed Control Display Type | Adaptive speed control full display plus priority messages |
+| Speed Control | Adaptive speed control with queue assist |
+| Adaptive Cruise Control Indication In Instrument Cluster | Enabled |
+| Speed Control | Adaptive speed control, stop and go |
+| Collision Mitigation By Braking | Collision mitigation by braking GEN 3 |
+| Forward Collision Warning | Forward collision warning GEN 3 |
+| Front Crash Sensing System | Front crash sensing system – Upfront sensor |
+
+
+Once this is done, you'll need to invoke the ACC calibration process. This is pretty easy to do with IID, SDD might take a bit of hunting around to kick it off. Basically find a nice straight road with a speed of 50 KM/H or higher, keep a good distance between you and the cars in front of you, and drive until the ACC lamp in the instrument cluster stops flashing. That'll signal that the calibration is complete.
 
 <br />
 <hr>
