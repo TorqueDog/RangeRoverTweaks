@@ -81,6 +81,7 @@ The solution is to program it out of the car's Car Config File (CCF). There is a
 
 > **Warning:** This may be illegal in your area, or at the very least may be cause for a FAIL on a safety inspection. There are two settings that can be modified. One only disables the audible nagging, while the other disables the seatbelt light in the cluster and will allow driving with your restraint unfastened without audibly alerting you. You make this change at your own peril. Don't be stupid.  
 
+**L405 Range Rover**
 |CCF Property|Value|Description|
 |:---|:---|:---|
 | USA safety belt chime | Disabled | When set to 'Disabled', turns off the key on / ignition on safety belt chime required for North American market vehicles. |
@@ -119,8 +120,7 @@ Why are there both percentage and KPH off-sets? Allegedly, the percentage inflat
 
 The facelift L320 Range Rover Sport (MY10-13) had a really clever way to adjust for the fact that people were putting on different tyre sizes than what the factory sent the cars out with. You could go into the navigation system and choose to perform a rolling calibration. The vehicle would compare the vehicle's speed data with the GPS, and adjust for the tyre's rolling circumference accordingly so your speedometer would be accurate (save for the speedometer inflation factor that was applied after the fact). When using SDD or IID to change the value, the L320 required the rolling circumference to be entered in millimeters, as does the L405.  
 
-Here's how you do it for the L405 in the CCF:  
-
+**L405 Range Rover**
 |CCF Property|Value|Description|
 |:---|:---|:---|
 | Tyre rolling circumference | [Tyre circumference in MM] | Use a tyre size calculator to determine how tall your wheel and tyre combination is in MM. A 275/40R22 tyre will have a rolling circumference of 2446 mm, so find a value as close to that as possible. |
