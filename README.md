@@ -48,7 +48,7 @@ This repo focuses mainly on **2013-2016.5 L405 Range Rover**, and occasionally w
 A lot of these things require changes to the vehicle's **Car Config File** or **CCF**. The CCF is a vital piece of the vehicle's operating instructions. Making the wrong changes could prevent your car from working properly, possibly even brick the damn thing and require an expensive trip to the dealer. Any CCF changes you find here, you perform **at your own risk**.  
 
 Stupid reasons to make CCF changes:  
-- A value is set to **Undefined** but there is a value in the list that matches your vehicle.  
+- An attribute is set to **Undefined**, **Unsupported**, or some other such value, but there is a value in the list that matches your vehicle.  
 &bull; Did your car work properly without it? Then it doesn't need it, and there's more risk in you adding it for zero gain. Leave it be, the car doesn't need it.
 - I was curious what it did.  
 &bull; Ugh, just close the browser tab before you wreck something. Okay, not entirely fair, some of these things *were* learned through my own trial-and-error, but don't blame me if you FA&FO with your expensive British luxobarge.
