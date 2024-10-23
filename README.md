@@ -243,15 +243,6 @@ I've always thought the deployable sidesteps was a great option, and I've been c
 
 I have no idea what the hell any of these are supposed to do, frankly. My curiosity is mainly because we can't get the el neato "SVAutobiography" cluster like the 2018+ L405s can, so there has to be _something_ to get a cool hidden gauge cluster appearance, right? _Right?_
 
-<br /><br />
-
-**Low speed intelligent emergency braking**
-
-|CCF Property|(My) Default Value|Possible Values|
-|:---|:---|:---|
-| Low speed intelligent emergency braking | Not fitted | &bull; Undefined <br /> &bull; Not fitted <br /> &bull; Rear only <br /> &bull; Front and Rear |
-| Low speed intelligent emergency braking | Not fitted | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
-
 
 <br /><br />
 
@@ -261,7 +252,7 @@ I have no idea what the hell any of these are supposed to do, frankly. My curios
 |:---|:---|:---|
 | Wade sensing | Not fitted | &bull; Undefined <br /> &bull; Not fitted <br /> &bull; Fitted |
 
-No mystery here; this is to enable Wade Sensing (how deep the water you're driving through is relative to the vehicle's water fording abilities), which was never made available in the North American market. Basically, you need to add the side mirror wade sensors (parking sensors that mount into the wing mirrors, requires different mirror frames), the wade sensing module, and the harness for it. This will likely have its own entry complete with part numbers to make it work at some point, but for now, it's stuck in this section.
+No mystery here; this is to enable Wade Sensing (how deep the water you're driving through is relative to the vehicle's water fording abilities), which was never made available in the North American market. Basically, you need to add the side mirror wade sensors (parking sensors that mount into the wing mirrors, requires different mirror frames), the wade sensing module (general proximity sensor module or GPSM), and the GPSM harness for it. This will likely have its own entry complete with part numbers to make it work at some point, but for now, it's stuck in this section.
 
 <br /><br />
 
