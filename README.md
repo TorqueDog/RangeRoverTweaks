@@ -172,7 +172,7 @@ Parts list:
 |Part Name|Part Number|Description|
 |:---|:---|:---|
 | Radar Unit (front Bumper Mounted), (adaptive cruise) | **LR062658** _(VIN:FA000001-GA999999)_ | This is the part that makes it possible for the vehicle to detect if it is approaching an object in front. As Land Rover have different P/Ns based on VIN series for L405, check [Scuderia Car Parts](https://www.scuderiacarparts.com/part-finder/landrover/range-rover/oe/471/4471/82542) to confirm the part you should use. |
-| Radar Unit (ALTERNATE PARTS) | &bull; **FPLA-9G768-AC** <br /> &bull; **DPLA-9G768-AC** <br /> &bull; **DPLA-9G768-AD** <br /> &bull; **GX73-9G768-AD** <br /> &bull; Basically any **XXXX-9G768-XX** sensor, pre-2018 | Note: **These are alternate part numbers.** As anyone reading this should be aware, Ford owned Land Rover and Jaguar for a time, and the Ford sensors are considerably cheaper than the JLR versions. Plenty of people have gotten these alternate Ford P/Ns to work, but you attempt these at your own risk. |
+| Radar Unit (ALTERNATE PARTS) | &bull; **FPLA-9G768-AC** <br /> &bull; **DPLA-9G768-AC** <br /> &bull; **DPLA-9G768-AD** <br /> &bull; **GX73-9G768-AD** <br /> &bull; Basically any **XXXX-9G768-XX** sensor, pre-2017 | Note: **These are alternate part numbers.** As anyone reading this should be aware, Ford owned Land Rover and Jaguar for a time, and the Ford sensors are considerably cheaper than the JLR versions. Plenty of people have gotten these alternate Ford P/Ns to work, but you will likely need to flash their firmware, so you attempt these at your own risk. |
 | Radar sensor mounting bracket | &bull; **LR060076** _(VIN:to HA999999)_ *Mine <br /> &bull; **LR100509** _(VIN:JA000001-on)_ | Allows mounting the radar sensor to the cutout in the front impact bar behind the bumper cover. Your sensor may come with this included if you buy it second-hand. |
 | Hex bolts, M6 x 14MM | &bull; **RYG500160** | The bolts required to mount the radar sensor and bracket. |
 | Cruise Control Switch (steering wheel mounted) (adaptive cruise, heated wheel) | &bull; **LR087486** _(VIN:GA283361-HA999999)_| A new cruise control switch with the distance adjustment (left and right buttons) is needed to adjust the following distance between your vehicle and the one in front. Again, check which P/N you need by checking [Scuderia Car Parts](https://www.scuderiacarparts.com/part-finder/landrover/range-rover/oe/471/4481/82930) based on VIN and what options you have fitted. |
@@ -181,16 +181,21 @@ CCF edits required (choose **exactly these values** or it won't work):
 |CCF Property|Value|
 |:---|:---|
 | Speed control | Adaptive speed control is fitted |
+| Speed Control | Adaptive speed control with queue assist |
+| Speed Control | Adaptive speed control, stop and go |
+| Adaptive Cruise Control Indication In Instrument Cluster | Enabled |
+| Adaptive Speed Control ECU | Enabled |
 | Adaptive Speed Control ECU | North America, Canada, Mexico, Australia |
 | Adaptive Speed Control ECU | Standard blockage level -40dB |
 | Collision Mitigation By Braking | Fitted |
-| Standard Speed Control Display Type | Adaptive speed control full display plus priority messages |
-| Speed Control | Adaptive speed control with queue assist |
-| Adaptive Cruise Control Indication In Instrument Cluster | Enabled |
-| Speed Control | Adaptive speed control, stop and go |
-| Collision Mitigation By Braking | Collision mitigation by braking GEN 3 |
-| Forward Collision Warning | Forward collision warning GEN 3 |
+| Collision Mitigation By Braking | Collision mitigation by braking GEN 3 - Level 2 |
+| Forward Collision Warning | Fitted |
+| Forward Collision Warning | Forward collision warning GEN 3 - Level 2 |
 | Front Crash Sensing System | Front crash sensing system – Upfront sensor |
+| Low speed intelligent emergency braking *optional | Fitted |
+| Low speed intelligent emergency braking *optional | Front and Rear |
+| Intelligent cruise control | Fitted|
+| Standard Speed Control Display Type | Adaptive speed control full display plus priority messages |
 
 
 Once this is done, you'll need to invoke the ACC calibration process. This is pretty easy to do with IID, SDD might take a bit of hunting around to kick it off. Basically find a nice straight road with a speed of 50 KM/H or higher, keep a good distance between you and the cars in front of you, and drive until the ACC lamp in the instrument cluster stops flashing. That'll signal that the calibration is complete. If you have difficulties, contact GAP Diagnostics themselves and they can help, including flashing a new firmware on the radar unit.
