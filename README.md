@@ -160,7 +160,7 @@ It's good... very good.
 
 ## Keep your distance with Adaptive Cruise Control
 
-My L405 Range Rover was an interesting mix of options from the original owner. I have the top-end Meridien audio system, but no rear entertainment. I have massaging and heated/cooled front seats, but no four-zone climate or center fridge (peltier-based chiller yes, fridge no). Automatic high beam assist, blind spot monitoring, traffic sign recognition, and lane departure warning, but no adaptive cruise control (ACC).
+My L405 Range Rover was an interesting mix of options from the original owner. I have the 875W Meridian audio system, but no rear entertainment. I have massaging and heated/cooled front seats, but no four-zone climate or center fridge (peltier-based chiller yes, fridge no). Automatic high beam assist, blind spot monitoring, traffic sign recognition, and lane departure warning, but no adaptive cruise control (ACC).
 
 I have had my misgivings about ACC in the past with a Mercedes whose DISTRONIC PLUS system would occasionally be rendered useless by radio frequency interference on my drive out east to visit my parents from time to time; the cruise control became entirely inoperable, and having DISTRONIC PLUS fitted meant foregoing the ability to fall back to 'dumb' cruise. But I do still miss having the ability to let the car manage the distance so I just need to change lanes and let it resume the speed I set it to, rather than having to cancel the cruise lest I rear-end this dummy in front of me going 10-under.
 
