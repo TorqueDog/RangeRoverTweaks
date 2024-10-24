@@ -216,9 +216,9 @@ Listed here are some rather interesting entries in the L405 CCF. These may not b
 |:---|:---|:---|
 | Lane keep assist | Not supported | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
 
-_Whaaaaa...?_ This one is particularly interesting to me because of the previous CCF edits to enable [Adaptive Cruise Control](#keep-your-distance-with-adaptive-cruise-control) (ACC). The ACC radar module and windshield-mounted camera that enables Lane Departure Warning (LDW) and Traffic Sign Recognition (TSR) combine forces to enable Lane Keep Assist (LKA). LKA is officially available on the 2018+ L405 models, which also have the option of a Cruise Steering Assist (CSA) mode. If you're familiar with LDW, LKA is the same thing except the vehicle will also gently steer itself back into the lane, as well as vibrate the steering wheel. This is described as sort of a 'ping pong'-type behavior where the vehicle doesn't have any intelligence in keeping the vehicle in the middle of the lane, it just stops you leaving your lane. On the other hand, CSA will try to keep the vehicle steering relatively straight and true in the lane, and will even negotiate gentle curves in the roadway without any input from the driver. 
+_Whaaaaa...?_ Lane Keep Assist is officially available on the 2018+ L405 models, which also have the option of a Cruise Steering Assist (CSA) mode. If you're familiar with Lane Departure Warning, LKA is the same thing except the vehicle will also gently steer itself back into the lane, as well as vibrate the steering wheel. This is described as sort of a 'ping pong'-type behavior where the vehicle doesn't have any intelligence in keeping the vehicle in the middle of the lane, it just stops you leaving your lane. On the other hand, CSA will try to keep the vehicle steering relatively straight and true in the lane, and will even negotiate gentle curves in the roadway without any input from the driver. 
 
-The **Not supported** default value doesn't give me much hope, but given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW, it is curious that it is present in the CCF despite it not being released into production a full two model years after the release of my 2016. Once I have my ACC radar module fitted and the whole system calibrated, this one will need to be tested to see if this can indeed work.
+The **Not supported** default value originally didn't give me much hope, but my L405's manual does make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF despite it not being released into production a full two model years after the release of my 2016. This one will need to be tested to see if this can indeed work.
 
 <br /><br />
 
@@ -275,3 +275,25 @@ No clue what the different variants do, but I'm quite curious.
 | Service interval | Undefined | &bull; Undefined <br /> &bull; User defined service interval <br /> &bull; Service interval 1 - 15000 km <br /> &bull; Service interval 2 - 7500 miles <br /> ... and so on. |
 
 To be blunt, I think Land Rover's recommended / default servicing interval for these things is absurdly long, and I would happily define my own service interval around 7,500 - 10,000 km. Strangely, my service interval in the CCF is set to 'Undefined' but I'm quite certain it is counting down from the factory 24,000 km interval. I don't know if changing these does much, if anything.
+
+
+**Eliminating the 'DRL Wink' when using turn-signals (Unsolved mystery!)**
+
+If you aren't sure what I mean by this, this is the behavior that shuts off the front 'signature LED tube' DRL on the side for which you have switched on the turn signal indicator. This is mandated by US D.O.T. regulations; if the indicator and LED DRL are too close in proximity then the DRL on that side must be switched off while the indicator is operating (so sayeth the regulation). It gets applied to all North American-spec vehicles because Canada and the US are (mostly) harmonized on their federally-mandated vehicle safety requirements. Of course, this doesn't apply to the UK and many places in the EU, so I thought 'There must be a way to change this behavior in the CCF'. It is entirely possible that this behaviour is baked into the NAS headlamps themselves, since the North American specification also has different headlamps to incorporate the amber side reflectors that aren't required elsewhere.
+
+Testing protocol:
+With the vehicle outside on a bright day: <br />
+&bull; Start the vehicle with the headlamp stalk in Auto<br />
+&bull; Put the rotary gear selector in D<br />
+&bull; Apply the parking brake (DO NOT FORGET THIS and for the love of god MAKE SURE IT HOLDS THE VEHICLE)<br />
+&bull; Turn on the driver's side indicator and check the front headlamp to see the behavior of the LED DRL.<br />
+Does it stay on or shut off while the amber indicator is flashing?<br />
+
+So far, I've been defeated. If anyone has any leads on how to accomplish this, please get in touch!
+Here's the list of things I've identified in the CCF and -- if I've tried them -- what the result was. Obviously my default values don't work.
+
+|CCF Property|(My) Default Value|Possible Values|What did the changed value do?|
+|:---|:---|:---|:---|
+| Dedicated daylight running behaviour - Market | North American specification | &bull; North American specification <br /> &bull; Japanese <br /> &bull; ECE <br /> &bull; Disabled | Japanese and ECE <br /> &bull; Behaviour unchanged. |
+| Front DRL Type | Incorporated DRL and Pos | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Dip as DRL <br /> &bull; Dedicated DRL <br /> &bull; Incorporated DRL and Pos <br /> &bull; Error | Dedicated DRL <br /> &bull; Behaviour unchanged. |
+| Front DRL profile | Diagnostic profile 11 | &bull; Not supported <br /> &bull; Diagnostic profile 1 <br /> &bull; Diagnostic profile 3 | Haven't tried this property yet. |
