@@ -277,6 +277,7 @@ No clue what the different variants do, but I'm quite curious.
 To be blunt, I think Land Rover's recommended / default servicing interval for these things is absurdly long, and I would happily define my own service interval around 7,500 - 10,000 km. Strangely, my service interval in the CCF is set to 'Undefined' but I'm quite certain it is counting down from the factory 24,000 km interval. I don't know if changing these does much, if anything.
 
 
+<br /><br />
 **Eliminating the 'DRL Wink' when using turn-signals (Unsolved mystery!)**
 
 If you aren't sure what I mean by this, this is the behavior that shuts off the front 'signature LED tube' DRL on the side for which you have switched on the turn signal indicator. This is mandated by US D.O.T. regulations; if the indicator and LED DRL are too close in proximity then the DRL on that side must be switched off while the indicator is operating (so sayeth the regulation). It gets applied to all North American-spec vehicles because Canada and the US are (mostly) harmonized on their federally-mandated vehicle safety requirements. Of course, this doesn't apply to the UK and many places in the EU, so I thought 'There must be a way to change this behavior in the CCF'. It is entirely possible that this behaviour is baked into the NAS headlamps themselves, since the North American specification also has different headlamps to incorporate the amber side reflectors that aren't required elsewhere.
