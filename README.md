@@ -307,4 +307,4 @@ Here's the list of things I've identified in the CCF and -- if I've tried them -
 | Dedicated daylight running behaviour - Market | North American specification | &bull; North American specification <br /> &bull; Japanese <br /> &bull; ECE <br /> &bull; Disabled | Japanese and ECE <br /> &bull; Behaviour unchanged. |
 | Front DRL Type | Incorporated DRL and Pos | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Dip as DRL <br /> &bull; Dedicated DRL <br /> &bull; Incorporated DRL and Pos <br /> &bull; Error | Dedicated DRL <br /> &bull; Behaviour unchanged. |
 | Front DRL profile | Diagnostic profile 11 | &bull; Not supported <br /> &bull; Diagnostic profile 1 <br /> &bull; Diagnostic profile 3 | Haven't tried this property yet. |
-| North American Lighting specification fitted | | | Will be attempting. | 
+| North American specification lamps are fitted. | Fitted | &bull; Not fitted <br /> &bull; Fitted <br /> | Behaviour unchanged. | 
