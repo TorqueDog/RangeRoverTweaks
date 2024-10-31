@@ -300,11 +300,19 @@ With the vehicle outside on a bright day: <br />
 Does it stay on or shut off while the amber indicator is flashing?<br />
 
 So far, I've been defeated. If anyone has any leads on how to accomplish this, please get in touch!
-Here's the list of things I've identified in the CCF and -- if I've tried them -- what the result was. Obviously my default values don't work.
+Here's the list of things I've identified in the CCF and -- if I've tried them -- what the result was. Obviously my default values don't work. It is very possible that it requires a combination of settings to work correctly.
 
 |CCF Property|(My) Default Value|Possible Values|What did the changed value do?|
 |:---|:---|:---|:---|
-| Dedicated daylight running behaviour - Market | North American specification | &bull; North American specification <br /> &bull; Japanese <br /> &bull; ECE <br /> &bull; Disabled | Japanese and ECE <br /> &bull; Behaviour unchanged. |
 | Front DRL Type | Incorporated DRL and Pos | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Dip as DRL <br /> &bull; Dedicated DRL <br /> &bull; Incorporated DRL and Pos <br /> &bull; Error | Dedicated DRL <br /> &bull; Behaviour unchanged. |
 | Front DRL profile | Diagnostic profile 11 | &bull; Not supported <br /> &bull; Diagnostic profile 1 <br /> &bull; Diagnostic profile 3 | Haven't tried this property yet. |
+| Dedicated daylight running behaviour - Market | North American specification | &bull; North American specification <br /> &bull; Japanese <br /> &bull; ECE <br /> &bull; Disabled | Japanese and ECE <br /> &bull; Behaviour unchanged. |
 | North American specification lamps are fitted. | Fitted | &bull; Not fitted <br /> &bull; Fitted <br /> | Behaviour unchanged. | 
+| Daytime running lamps enable| Active | | |
+| Scandinavian daylight running lamps enable | Disabled | | |
+| Canadian daylight running lamps enable | Disabled | | | 
+| Daytime running lamps | Standard dipped lighting (non daytime running light) | | |
+| Headlights symmetry | USA symmetry | &bull; Left hand symmetry <br /> &bull; Right hand symmetry <br /> &bull; USA symmetry | Left hand symmetry <br /> &bull; Behaviour unchanged. |
+| DRL Auto Switching | Disabled | | |
+|
+
