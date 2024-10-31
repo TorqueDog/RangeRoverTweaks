@@ -314,5 +314,4 @@ Here's the list of things I've identified in the CCF and -- if I've tried them -
 | Daytime running lamps | Standard dipped lighting (non daytime running light) | | |
 | Headlights symmetry | USA symmetry | &bull; Left hand symmetry <br /> &bull; Right hand symmetry <br /> &bull; USA symmetry | Left hand symmetry <br /> &bull; Behaviour unchanged. |
 | DRL Auto Switching | Disabled | | |
-|
 
