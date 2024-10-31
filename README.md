@@ -194,7 +194,7 @@ CCF edits required (choose **exactly these values** or it won't work):
 | Front Crash Sensing System | Front crash sensing system – Upfront sensor |
 | Low speed intelligent emergency braking *optional | Fitted |
 | Low speed intelligent emergency braking *optional | Front and Rear |
-| Intelligent cruise control | Fitted|
+| Intelligent cruise control | Fitted |
 | Standard Speed Control Display Type | Adaptive speed control full display plus priority messages |
 
 
@@ -218,9 +218,18 @@ Listed here are some rather interesting entries in the L405 CCF. These may not b
 
 _Whaaaaa...?_ Lane Keep Assist is officially available on the 2018+ L405 models, which also have the option of a Cruise Steering Assist (CSA) mode. If you're familiar with Lane Departure Warning, LKA is the same thing except the vehicle will also gently steer itself back into the lane, as well as vibrate the steering wheel. This is described as sort of a 'ping pong'-type behavior where the vehicle doesn't have any intelligence in keeping the vehicle in the middle of the lane, it just stops you leaving your lane. On the other hand, CSA will try to keep the vehicle steering relatively straight and true in the lane, and will even negotiate gentle curves in the roadway without any input from the driver. 
 
-The **Not supported** default value originally didn't give me much hope, but my L405's manual does make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF despite it not being released into production a full two model years after the release of my 2016. This one will need to be tested to see if this can indeed work.
+The **Not supported** default value originally didn't give me much hope, but my L405's manual does make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF despite it not being released into production a full two model years after the release of my 2016. 
+
+So far I have done some testing on this; when 'Lane keep assist' is set to **Fitted** but ACC has **not** been fitted / configured per the above, LKA does not work but LDW continues to function normally. Once ACC has been enabled and calibrated, I will perform the LKA test once more.
 
 <br /><br />
+
+**Night Vision**
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| Night vision | Not fitted | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
+
+This sounds goddamned sweet, and needs more investigation.
 
 **Deployable sidesteps / Retractable running board**
 
@@ -298,3 +307,4 @@ Here's the list of things I've identified in the CCF and -- if I've tried them -
 | Dedicated daylight running behaviour - Market | North American specification | &bull; North American specification <br /> &bull; Japanese <br /> &bull; ECE <br /> &bull; Disabled | Japanese and ECE <br /> &bull; Behaviour unchanged. |
 | Front DRL Type | Incorporated DRL and Pos | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Dip as DRL <br /> &bull; Dedicated DRL <br /> &bull; Incorporated DRL and Pos <br /> &bull; Error | Dedicated DRL <br /> &bull; Behaviour unchanged. |
 | Front DRL profile | Diagnostic profile 11 | &bull; Not supported <br /> &bull; Diagnostic profile 1 <br /> &bull; Diagnostic profile 3 | Haven't tried this property yet. |
+| North American Lighting specification fitted | | | Will be attempting. | 
