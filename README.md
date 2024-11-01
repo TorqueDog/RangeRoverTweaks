@@ -107,7 +107,7 @@ If you write with the second one as 'disabled'... again, just don't be stupid, o
 
 Eeeeugh... *inflation*. In 2024, it's all anybody talks about.  
   
-Well, I've got news for you: your Rover has been inflating your speedometer for a long time. You might have noticed your phone's GPS speed (Waze, Apple Maps, Google Maps, etc.) was often 2 KM/H or 2% lower than what your vehicle claimed you were doing. *You* think you're doing 60 KM/H, but you're *actually* only doing 58. This is incredibly stupid, unnecessary behavior (BuT sAfEtY!!!1!) and it deserves to be put out of its misery, so let's do that. Into the CCF we go. There are three settings we're interested in, and you want to change them to match what I've got below.
+Well, I've got news for you: your Range Rover has been inflating your speedometer for a long time. You might have noticed your phone's GPS speed (Waze, Apple Maps, Google Maps, etc.) was often 2 KM/H or 2% lower than what your vehicle claimed you were doing. *You* think you're doing 60 KM/H, but you're *actually* only doing 58. This is incredibly stupid, unnecessary behavior (BuT sAfEtY!!!1!) and it deserves to be put out of its misery, so let's do that. Into the CCF we go. There are three settings we're interested in, and you want to change them to match what I've got below.
 
 **L405 Range Rover**
 |CCF Property|Value|Description|
@@ -145,7 +145,7 @@ The facelift L320 Range Rover Sport (MY10-13) had a really clever way to adjust 
 
 If you've ever looked inside an L494 Range Rover Sport and noticed an extra little icon on the terrain response controller that looks like a winding road and wondered "what's that for", then you're in the right place. That windy road icon is to put the vehicle into "Dynamic" Terrain Response mode. Dynamic Terrain Response is a mode that backs off the electronic power steering assist a bit for a sportier steering feel, and stiffens the anti-roll bars when cornering. The result is a very big vehicle cornering nice and flat like a much smaller, sportier vehicle without a compromise in comfort. It also changes the instrument cluster and ambient lighting color to red, presumably because red is the universal color for <s>driving like a hooligan</s> <i>racing</i>.
 
-Very cool, but you're probably thinking "How much does it cost to add the parts in to enable it?" I'm happy to report it costs whatever it takes for you to edit the CCF and add it in. Dynamic Terrain Response exists only in software (fitting the appropriate Terrain Response dial is optional), and everything the vehicle needs is already present.
+Very cool, but you're probably thinking "How much does it cost to add the parts in to enable it?" I'm happy to report it costs whatever it takes for you to edit the CCF and add it in. Dynamic Terrain Response exists only in software (fitting the appropriate Terrain Response dial is optional), and everything the vehicle needs is already present-... at least on high-spec L405 models. You _must_ have adaptive anti-roll bars for this to work properly.
 
 **L405 Range Rover**
 |CCF Property|Value|Description|
@@ -273,7 +273,7 @@ No mystery here; this is to enable Wade Sensing (how deep the water you're drivi
 |:---|:---|:---|
 | TPMS variant | Standard | &bull; Fitted <br /> &bull; Standard <br /> &bull; Premium Chassis <br /> &bull; ECO <br /> &bull; Error |
 
-No clue what the different variants do, but I'm quite curious.
+No clue what the different variants do, but I'm quite curious. Will be updated once tested.
 
 
 
@@ -285,7 +285,7 @@ No clue what the different variants do, but I'm quite curious.
 |:---|:---|:---|
 | Service interval | Undefined | &bull; Undefined <br /> &bull; User defined service interval <br /> &bull; Service interval 1 - 15000 km <br /> &bull; Service interval 2 - 7500 miles <br /> ... and so on. |
 
-To be blunt, I think Land Rover's recommended / default servicing interval for these things is absurdly long, and I would happily define my own service interval around 7,500 - 10,000 km. Strangely, my service interval in the CCF is set to 'Undefined' but I'm quite certain it is counting down from the factory 24,000 km interval. I don't know if changing these does much, if anything.
+To be blunt, I think Land Rover's recommended / default servicing interval for these things is absurdly long, and I would happily define my own service interval around or between 5,000 - 10,000 km. Strangely, my service interval in the CCF is set to 'Undefined' but I'm quite certain it is counting down from the factory 24,000 km interval. I don't know if changing these does much, if anything.
 
 
 <br /><br />
@@ -296,8 +296,8 @@ If you aren't sure what I mean by this, this is the behavior that shuts off the 
 Testing protocol:
 With the vehicle outside on a bright day: <br />
 &bull; Start the vehicle with the headlamp stalk in Auto<br />
-&bull; Put the rotary gear selector in D<br />
-&bull; Apply the parking brake (DO NOT FORGET THIS and for the love of god MAKE SURE IT HOLDS THE VEHICLE)<br />
+&bull; Put the rotary gear selector in D (Do this BEFORE applying the parking brake)<br />
+&bull; Apply the parking brake (DO NOT FORGET THIS and for the love of god MAKE SURE IT HOLDS THE VEHICLE BEFORE PROCEEDING)<br />
 &bull; Turn on the driver's side indicator and check the front headlamp to see the behavior of the LED DRL.<br />
 Does it stay on or shut off while the amber indicator is flashing?<br />
 
@@ -307,13 +307,13 @@ Here's the list of things I've identified in the CCF and -- if I've tried them -
 |CCF Property|(My) Default Value|Possible Values|What did the changed value do?|
 |:---|:---|:---|:---|
 | Front DRL Type | Incorporated DRL and Pos | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Dip as DRL <br /> &bull; Dedicated DRL <br /> &bull; Incorporated DRL and Pos <br /> &bull; Error | Dedicated DRL <br /> &bull; Behaviour unchanged. |
-| Front DRL profile | Diagnostic profile 11 | &bull; Not supported <br /> &bull; Diagnostic profile 1 <br /> &bull; Diagnostic profile 3 | Haven't tried this property yet. |
+| Front DRL profile | Diagnostic profile 11 | &bull; Not supported <br /> &bull; Diagnostic profile 1 <br /> &bull; Diagnostic profile 3 | Untested |
 | Dedicated daylight running behaviour - Market | North American specification | &bull; North American specification <br /> &bull; Japanese <br /> &bull; ECE <br /> &bull; Disabled | Japanese and ECE <br /> &bull; Behaviour unchanged. |
 | North American specification lamps are fitted. | Fitted | &bull; Not fitted <br /> &bull; Fitted <br /> | Behaviour unchanged. | 
-| Daytime running lamps enable| Active | | |
-| Scandinavian daylight running lamps enable | Disabled | | |
-| Canadian daylight running lamps enable | Disabled | | | 
-| Daytime running lamps | Standard dipped lighting (non daytime running light) | | |
+| Daytime running lamps enable | Active | | Untested |
+| Scandinavian daylight running lamps enable | Disabled | | Untested |
+| Canadian daylight running lamps enable | Disabled | | Untested | 
+| Daytime running lamps | Standard dipped lighting (non daytime running light) | | Untested |
 | Headlights symmetry | USA symmetry | &bull; Left hand symmetry <br /> &bull; Right hand symmetry <br /> &bull; USA symmetry | Left hand symmetry <br /> &bull; Behaviour unchanged. |
-| DRL Auto Switching | Disabled | | |
+| DRL Auto Switching | Disabled | | Untested |
 
