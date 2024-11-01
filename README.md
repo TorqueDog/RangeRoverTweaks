@@ -39,7 +39,7 @@ A small corner of the internet where I document the interesting and useful thing
 
 Since about 2002, Land Rovers have gotten increasingly more complex. More modules for more things, more ways to control how the vehicle behaves, how equipment is enabled/disabled, and so on. The L405 Range Rover is a great example of how just a bit of software tweaking can add a good deal of customization and features.
 
-This repo focuses mainly on **2013-2016.5 L405 Range Rover**, and occasionally will mention things of value to **2006-2009 L320 Range Rover Sport**. Some of the L405 stuff may apply to L494 Range Rover Sport, but I can't confirm it. Feel free to reach out if any of it does and I'll make a note of it here.
+This repo focuses mainly on **2013-2016.5 L405 Range Rover**, and occasionally will mention things of value to **2006-2009 L320 Range Rover Sport**. Some of the L405 stuff may apply to L494 Range Rover Sport, but I can't confirm it. Feel free to reach out if any of it does and I'll make a note of it here. This repository is a combination of stuff I figured out on my own, stuff found in GAP's documentation, and on various Range Rover forums and groups, such as [RangeRovers.net](https://www.rangerovers.net/forums/range-rover-mark-iv-l405.24/).
 
 <br />
 <hr>
@@ -127,7 +127,7 @@ Why are there both percentage and KPH off-sets? Allegedly, the percentage inflat
 ## New shoes, different size - calibrating for different tyre sizes
 
 >[Note]
->This section needs some fixing particularly with the explanation, and here's why: My rolling circumference based on the wheel/tyre combo I run is 2446 mm. This is all well and good except that the speedometer is accurate while the below value **is not set correctly for that circumference**. I've even reached out to GAP Diagnostic themselves, who have replied back that they "cannot tell honestly as these values are not explained in LR literature. This is why we suggest changing and comparing with a GPS". So if you're gonna mess with tyre sizes outside of the normal spec, well, you're stuck messing with this value and seeing what it does.
+>This section needs some fixing particularly with the explanation, and here's why: My rolling circumference based on the wheel/tyre combo I run is 2446 mm. This is all well and good except that the speedometer is accurate while the below value **is not set correctly for that circumference**. I've even reached out to GAP Diagnostic themselves, who have replied back that they "cannot tell honestly as these values are not explained in LR literature. This is why we suggest changing and comparing with a GPS". So if you're gonna mess with tyre sizes outside of the normal spec, well, you're stuck messing with this value and seeing what it does. This isn't under [Experimental and unknowns](#experimental-and-unknowns) because **we know this is the right value to change**, but our understanding of what to change it **to** is still incomplete.
 
 The facelift L320 Range Rover Sport (MY10-13) had a really clever way to adjust for the fact that people were putting on different tyre sizes than what the factory sent the cars out with. You could go into the navigation system and choose to perform a rolling calibration. The vehicle would compare the vehicle's speed data with the GPS, and adjust for the tyre's rolling circumference accordingly so your speedometer would be accurate (save for the speedometer inflation factor that was applied after the fact). When using SDD or IID to change the value, the L320 required the rolling circumference to be entered in millimeters.  
 
@@ -143,7 +143,7 @@ The facelift L320 Range Rover Sport (MY10-13) had a really clever way to adjust 
 
 ## Adding some athleticism to the big pudding - enabling Dynamic Terrain Response
 
-If you've ever looked inside an L494 Range Rover Sport and noticed an extra little icon on the terrain response controller that looks like a winding road and wondered "what's that for", then you're in the right place. That windy road icon is to put the vehicle into "Dynamic" Terrain Response mode. Dynamic Terrain Response is a mode that backs off the electronic power steering assist a bit for a sportier steering feel, and stiffens the anti-roll bars when cornering. The result is a very big vehicle cornering nice and flat like a much smaller, sportier vehicle without a compromise in comfort. It also changes the instrument cluster and ambient lighting color to red, presumably because red is the universal color for <s>driving like a hooligan</s> <i>racing</i>.
+If you've ever looked inside an L494 Range Rover Sport and noticed an extra little icon on the terrain response controller that looks like a winding road and wondered "what's that for", then you're in the right place. That winding road icon is to put the vehicle into "Dynamic" Terrain Response mode. Dynamic Terrain Response is a mode that backs off the electric power steering assist a bit for a sportier steering feel, and stiffens the anti-roll bars when cornering. The result is a very big vehicle cornering nice and flat like a much smaller, sportier vehicle without a compromise in comfort. It also changes the instrument cluster and ambient lighting color to red, presumably because red is the universal color for <s>driving like a hooligan</s> <i>racing</i>.
 
 Very cool, but you're probably thinking "How much does it cost to add the parts in to enable it?" I'm happy to report it costs whatever it takes for you to edit the CCF and add it in. Dynamic Terrain Response exists only in software (fitting the appropriate Terrain Response dial is optional), and everything the vehicle needs is already present-... at least on high-spec L405 models. You _must_ have adaptive anti-roll bars for this to work properly.
 
@@ -154,7 +154,7 @@ Very cool, but you're probably thinking "How much does it cost to add the parts 
 
 But wait, how do I change into it if I don't have the appropriate Terrain Response control with the Dynamic icon? Easy. Take Terrain Response out of 'Auto' so that the normal Terrain Response mode is selected. Then turn the dial one click to the left, as though you're selecting the empty space beside normal mode. The instrument cluster will show you've selected Dynamic, the gauges and ambient lighting will turn red, and the Terrain Response control will not show any mode illuminated. You'll notice a difference on the road in short order.
 
-It's good... very good.
+It's good... very good. If you want, you can try and find the appropriate part number that includes the Dynamic Terrain Response mode on the dial, but I haven't bothered; it simply isn't necessary.
 
 <br />
 <hr>
@@ -200,7 +200,7 @@ CCF edits required (if it doesn't work, re-check these values):
 | Standard Speed Control Display Type | Adaptive speed control full display plus priority messages |
 
 *Your vehicle may not show 'Level 2'. Just pick the same value so long as it says "GEN 3".  
-**Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via further CCF research, like the Low Speed Intelligent Emergency Braking option.
+**Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via independent CCF research, and from places like [RangeRovers.net](https://www.rangerovers.net/forums/range-rover-mark-iv-l405.24/) forums, like the Low Speed Intelligent Emergency Braking option.
 
 Once this is done, you'll need to invoke the ACC calibration process. This is pretty easy to do with IID, SDD might take a bit of hunting around to kick it off. Basically find a nice straight road with a speed of 50 KM/H or higher, keep a good distance between you and the cars in front of you, and drive until the ACC lamp in the instrument cluster stops flashing. That'll signal that the calibration is complete. If you have difficulties, contact GAP Diagnostics themselves and they can help, including flashing a new firmware on the radar unit.
 
