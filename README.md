@@ -214,6 +214,10 @@ Remember how I said a good deal of the knowledge here was learned through trial 
 
 Listed here are some rather interesting entries in the L405 CCF. These may not be present in your CCF, especially given that my 2016 L405 is a late production 'MY2016**.5**'. If they are and you have different values set than what I have here, I'd love to hear from you, so please reach out. I will try and group related entries together in a single table for readability's sake. Now, without further ado, the curious entries.
 
+<hr>
+<br />
+
+
 **Eliminating the 'DRL Wink' when using turn-signals (Unsolved mystery!)**
 
 If you aren't sure what I mean by this, this is the behavior that shuts off the front 'signature LED tube' DRL on the side for which you have switched on the turn signal indicator. This is mandated by US D.O.T. regulations; if the indicator and LED DRL are too close in proximity then the DRL on that side must be switched off while the indicator is operating (so sayeth the regulation). It gets applied to all North American-spec vehicles because Canada and the US are (mostly) harmonized on their federally-mandated vehicle safety requirements. Of course, this doesn't apply to the UK and many places in the EU, so I thought 'There must be a way to change this behavior in the CCF'. It is entirely possible that this behaviour is baked into the NAS headlamps themselves, since the North American specification also has different headlamps to incorporate the amber side reflectors that aren't required elsewhere. So LR067204 and LR067213 might be needed (LHD adaptive bi-xenon headlamps, non-NAS spec).
@@ -267,7 +271,7 @@ So far I have done some testing on this; when 'Lane keep assist' is set to **Fit
 |:---|:---|:---|
 | Night vision | Not fitted | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
 
-This sounds goddamned sweet, and needs more investigation.
+Who *wouldn't* want Night Vision?! The W221 Mercedes S-Class in the UK had optional infrared night vision (Top Gear, Series 8 Episode 4), there has to be something to this value being available in the CCF. This needs more investigation.
 
 **Deployable sidesteps / Retractable running board**
 
