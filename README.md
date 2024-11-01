@@ -179,7 +179,7 @@ Parts list:
 | Hex bolts, M6 x 14MM | &bull; **RYG500160** | The bolts required to mount the radar sensor and bracket. |
 | Cruise Control Switch (steering wheel mounted) (adaptive cruise, heated wheel) | &bull; **LR087486** _(VIN:GA283361-HA999999)_| A new cruise control switch with the distance adjustment (left and right buttons) is needed to adjust the following distance between your vehicle and the one in front. Again, check which P/N you need by checking [Scuderia Car Parts](https://www.scuderiacarparts.com/part-finder/landrover/range-rover/oe/471/4481/82930) based on VIN and what options you have fitted. |
 
-CCF edits required (choose **exactly these values** or it won't work):
+CCF edits required (if it doesn't work, re-check these values):
 |CCF Property|Value|
 |:---|:---|
 | Speed control | Adaptive speed control is fitted |
