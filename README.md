@@ -190,15 +190,17 @@ CCF edits required (choose **exactly these values** or it won't work):
 | Adaptive Speed Control ECU | North America, Canada, Mexico, Australia |
 | Adaptive Speed Control ECU | Standard blockage level -40dB |
 | Collision Mitigation By Braking | Fitted |
-| Collision Mitigation By Braking | Collision mitigation by braking GEN 3 - Level 2 |
+| Collision Mitigation By Braking | Collision mitigation by braking GEN 3 - Level 2* |
 | Forward Collision Warning | Fitted |
-| Forward Collision Warning | Forward collision warning GEN 3 - Level 2 |
+| Forward Collision Warning | Forward collision warning GEN 3 - Level 2* |
 | Front Crash Sensing System | Front crash sensing system – Upfront sensor |
 | Low speed intelligent emergency braking *optional | Fitted |
 | Low speed intelligent emergency braking *optional | Front and Rear |
 | Intelligent cruise control | Fitted |
 | Standard Speed Control Display Type | Adaptive speed control full display plus priority messages |
 
+*Your vehicle may not show 'Level 2'. Just pick the same value so long as it says "GEN 3".  
+**Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via further CCF research, like the Low Speed Intelligent Emergency Braking option.
 
 Once this is done, you'll need to invoke the ACC calibration process. This is pretty easy to do with IID, SDD might take a bit of hunting around to kick it off. Basically find a nice straight road with a speed of 50 KM/H or higher, keep a good distance between you and the cars in front of you, and drive until the ACC lamp in the instrument cluster stops flashing. That'll signal that the calibration is complete. If you have difficulties, contact GAP Diagnostics themselves and they can help, including flashing a new firmware on the radar unit.
 
@@ -212,83 +214,6 @@ Remember how I said a good deal of the knowledge here was learned through trial 
 
 Listed here are some rather interesting entries in the L405 CCF. These may not be present in your CCF, especially given that my 2016 L405 is a late production 'MY2016**.5**'. If they are and you have different values set than what I have here, I'd love to hear from you, so please reach out. I will try and group related entries together in a single table for readability's sake. Now, without further ado, the curious entries.
 
-**Lane Keep Assist**
-
-|CCF Property|(My) Default Value|Possible Values|
-|:---|:---|:---|
-| Lane keep assist | Not supported | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
-
-_Whaaaaa...?_ Lane Keep Assist is officially available on the 2018+ L405 models, which also have the option of a Cruise Steering Assist (CSA) mode. If you're familiar with Lane Departure Warning, LKA is the same thing except the vehicle will also gently steer itself back into the lane, as well as vibrate the steering wheel. This is described as sort of a 'ping pong'-type behavior where the vehicle doesn't have any intelligence in keeping the vehicle in the middle of the lane, it just stops you leaving your lane. On the other hand, CSA will try to keep the vehicle steering relatively straight and true in the lane, and will even negotiate gentle curves in the roadway without any input from the driver. 
-
-The **Not supported** default value originally didn't give me much hope, but my L405's manual does make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF despite it not being released into production a full two model years after the release of my 2016. 
-
-So far I have done some testing on this; when 'Lane keep assist' is set to **Fitted** but ACC has **not** been fitted / configured per the above, LKA does not work but LDW continues to function normally. Once ACC has been enabled and calibrated, I will perform the LKA test once more.
-
-<br /><br />
-
-**Night Vision**
-|CCF Property|(My) Default Value|Possible Values|
-|:---|:---|:---|
-| Night vision | Not fitted | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
-
-This sounds goddamned sweet, and needs more investigation.
-
-**Deployable sidesteps / Retractable running board**
-
-|CCF Property|(My) Default Value|Possible Values|
-|:---|:---|:---|
-| Deployable sidesteps | Not supported | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
-| Retractable running board | Undefined | &bull; Undefined <br /> &bull; Without retractable running board <br /> &bull; Retractable running board - Button controlled |
-
-I've always thought the deployable sidesteps was a great option, and I've been curious what would be needed to fit the factory steps to my 2016 L405. I suspect both settings are part of a complete fitting solution, as the instructions to use the deployable sidesteps from Land Rover do mention a function switch to operate the side steps manually to get them into Terrain Response Override mode and Roof Access mode.
-
-<br /><br />
-
-**Cluster alert graphics / Gauge variant / ECO data driver information display**
-
-|CCF Property|(My) Default Value|Possible Values|
-|:---|:---|:---|
-| Cluster alert GFX | Not supported | &bull; Not supported <br /> &bull; Generic Warning Display <br /> &bull; Market Derivative Warning Display <br /> &bull; Jaguar Branded Warning Display <br /> &bull; LR Branded Warning Display <br /> &bull; Error |
-| Gauge variant | Scale 1 | &bull; Scale 1 <br /> &bull; Scale 2 <br /> &bull; Scale 3 <br /> &bull; Scale 4 |
-| ECO data driver information display | Display information level 5 | &bull; Disabled <br /> &bull; Display information level 1 <br /> &bull; Display information level 2 <br /> &bull; Display information level 3 <br /> &bull; Display information level 4 <br /> &bull; Display information level 5 <br /> &bull; Display information level 6 <br /> &bull; Display information level 7 <br /> &bull; Display information level 8 |
-
-I have no idea what the hell any of these are supposed to do, frankly. My curiosity is mainly because we can't get the el neato "SVAutobiography" cluster like the 2018+ L405s can, so there has to be _something_ to get a cool hidden gauge cluster appearance, right? _Right?_
-
-
-<br /><br />
-
-**Wade sensing**
-
-|CCF Property|(My) Default Value|Possible Values|
-|:---|:---|:---|
-| Wade sensing | Not fitted | &bull; Undefined <br /> &bull; Not fitted <br /> &bull; Fitted |
-
-No mystery here; this is to enable Wade Sensing (how deep the water you're driving through is relative to the vehicle's water fording abilities), which was never made available in the North American market. Basically, you need to add the side mirror wade sensors (parking sensors that mount into the wing mirrors, requires different mirror frames), the wade sensing module (general proximity sensor module or GPSM), and the GPSM harness for it. This will likely have its own entry complete with part numbers to make it work at some point, but for now, it's stuck in this section.
-
-<br /><br />
-
-**TPMS variant**
-
-|CCF Property|(My) Default Value|Possible Values|
-|:---|:---|:---|
-| TPMS variant | Standard | &bull; Fitted <br /> &bull; Standard <br /> &bull; Premium Chassis <br /> &bull; ECO <br /> &bull; Error |
-
-No clue what the different variants do, but I'm quite curious. Will be updated once tested.
-
-
-
-<br /><br />
-
-**Service interval**
-
-|CCF Property|(My) Default Value|Possible Values|
-|:---|:---|:---|
-| Service interval | Undefined | &bull; Undefined <br /> &bull; User defined service interval <br /> &bull; Service interval 1 - 15000 km <br /> &bull; Service interval 2 - 7500 miles <br /> ... and so on. |
-
-To be blunt, I think Land Rover's recommended / default servicing interval for these things is absurdly long, and I would happily define my own service interval around or between 5,000 - 10,000 km. Strangely, my service interval in the CCF is set to 'Undefined' but I'm quite certain it is counting down from the factory 24,000 km interval. I don't know if changing these does much, if anything.
-
-
-<br /><br />
 **Eliminating the 'DRL Wink' when using turn-signals (Unsolved mystery!)**
 
 If you aren't sure what I mean by this, this is the behavior that shuts off the front 'signature LED tube' DRL on the side for which you have switched on the turn signal indicator. This is mandated by US D.O.T. regulations; if the indicator and LED DRL are too close in proximity then the DRL on that side must be switched off while the indicator is operating (so sayeth the regulation). It gets applied to all North American-spec vehicles because Canada and the US are (mostly) harmonized on their federally-mandated vehicle safety requirements. Of course, this doesn't apply to the UK and many places in the EU, so I thought 'There must be a way to change this behavior in the CCF'. It is entirely possible that this behaviour is baked into the NAS headlamps themselves, since the North American specification also has different headlamps to incorporate the amber side reflectors that aren't required elsewhere. So LR067204 and LR067213 might be needed (LHD adaptive bi-xenon headlamps, non-NAS spec).
@@ -316,4 +241,98 @@ Here's the list of things I've identified in the CCF and -- if I've tried them -
 | Daytime running lamps | Standard dipped lighting (non daytime running light) | | Untested |
 | Headlights symmetry | USA symmetry | &bull; Left hand symmetry <br /> &bull; Right hand symmetry <br /> &bull; USA symmetry | Left hand symmetry <br /> &bull; Behaviour unchanged. |
 | DRL Auto Switching | Disabled | | Untested |
+
+<br />
+<hr>
+<br />
+
+**Lane Keep Assist**
+
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| Lane keep assist | Not supported | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
+
+_Whaaaaa...?_ Lane Keep Assist is officially available on the 2018+ L405 models, which also have the option of a Cruise Steering Assist (CSA) mode. If you're familiar with Lane Departure Warning, LKA is the same thing except the vehicle will also gently steer itself back into the lane, as well as vibrate the steering wheel. This is described as sort of a 'ping pong'-type behavior where the vehicle doesn't have any intelligence in keeping the vehicle in the middle of the lane, it just stops you leaving your lane. On the other hand, CSA will try to keep the vehicle steering relatively straight and true in the lane, and will even negotiate gentle curves in the roadway without any input from the driver. 
+
+The **Not supported** default value originally didn't give me much hope, but my L405's manual does make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF despite it not being released into production a full two model years after the release of my 2016. 
+
+So far I have done some testing on this; when 'Lane keep assist' is set to **Fitted** but ACC has **not** been fitted / configured per the above, LKA does not work but LDW continues to function normally. Once ACC has been enabled and calibrated, I will perform the LKA test once more.
+
+<br />
+<hr>
+<br />
+
+**Night Vision**
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| Night vision | Not fitted | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
+
+This sounds goddamned sweet, and needs more investigation.
+
+**Deployable sidesteps / Retractable running board**
+
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| Deployable sidesteps | Not supported | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
+| Retractable running board | Undefined | &bull; Undefined <br /> &bull; Without retractable running board <br /> &bull; Retractable running board - Button controlled |
+
+I've always thought the deployable sidesteps was a great option, and I've been curious what would be needed to fit the factory steps to my 2016 L405. I suspect both settings are part of a complete fitting solution, as the instructions to use the deployable sidesteps from Land Rover do mention a function switch to operate the side steps manually to get them into Terrain Response Override mode and Roof Access mode.
+
+<br />
+<hr>
+<br />
+
+**Cluster alert graphics / Gauge variant / ECO data driver information display**
+
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| Cluster alert GFX | Not supported | &bull; Not supported <br /> &bull; Generic Warning Display <br /> &bull; Market Derivative Warning Display <br /> &bull; Jaguar Branded Warning Display <br /> &bull; LR Branded Warning Display <br /> &bull; Error |
+| Gauge variant | Scale 1 | &bull; Scale 1 <br /> &bull; Scale 2 <br /> &bull; Scale 3 <br /> &bull; Scale 4 |
+| ECO data driver information display | Display information level 5 | &bull; Disabled <br /> &bull; Display information level 1 <br /> &bull; Display information level 2 <br /> &bull; Display information level 3 <br /> &bull; Display information level 4 <br /> &bull; Display information level 5 <br /> &bull; Display information level 6 <br /> &bull; Display information level 7 <br /> &bull; Display information level 8 |
+
+I have no idea what the hell any of these are supposed to do, frankly. My curiosity is mainly because we can't get the el neato "SVAutobiography" cluster like the 2018+ L405s can, so there has to be _something_ to get a cool hidden gauge cluster appearance, right? _Right?_
+
+
+<br />
+<hr>
+<br />
+
+**Wade sensing**
+
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| Wade sensing | Not fitted | &bull; Undefined <br /> &bull; Not fitted <br /> &bull; Fitted |
+
+No mystery here; this is to enable Wade Sensing (how deep the water you're driving through is relative to the vehicle's water fording abilities), which was never made available in the North American market. Basically, you need to add the side mirror wade sensors (parking sensors that mount into the wing mirrors, requires different mirror frames), the wade sensing module (general proximity sensor module or GPSM), and the GPSM harness for it. This will likely have its own entry complete with part numbers to make it work at some point, but for now, it's stuck in this section.
+
+<br />
+<hr>
+<br />
+
+**TPMS variant**
+
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| TPMS variant | Standard | &bull; Fitted <br /> &bull; Standard <br /> &bull; Premium Chassis <br /> &bull; ECO <br /> &bull; Error |
+
+No clue what the different variants do, but I'm quite curious. Will be updated once tested.
+
+
+
+<br />
+<hr>
+<br />
+
+**Service interval**
+
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| Service interval | Undefined | &bull; Undefined <br /> &bull; User defined service interval <br /> &bull; Service interval 1 - 15000 km <br /> &bull; Service interval 2 - 7500 miles <br /> ... and so on. |
+
+To be blunt, I think Land Rover's recommended / default servicing interval for these things is absurdly long, and I would happily define my own service interval around or between 5,000 - 10,000 km. Strangely, my service interval in the CCF is set to 'Undefined' but I'm quite certain it is counting down from the factory 24,000 km interval. I don't know if changing these does much, if anything.
+
+
+<br />
+<hr>
+<br />
 
