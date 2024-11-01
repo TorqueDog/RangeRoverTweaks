@@ -126,14 +126,16 @@ Why are there both percentage and KPH off-sets? Allegedly, the percentage inflat
 
 ## New shoes, different size - calibrating for different tyre sizes
 
-The facelift L320 Range Rover Sport (MY10-13) had a really clever way to adjust for the fact that people were putting on different tyre sizes than what the factory sent the cars out with. You could go into the navigation system and choose to perform a rolling calibration. The vehicle would compare the vehicle's speed data with the GPS, and adjust for the tyre's rolling circumference accordingly so your speedometer would be accurate (save for the speedometer inflation factor that was applied after the fact). When using SDD or IID to change the value, the L320 required the rolling circumference to be entered in millimeters, as does the L405.  
+>[Note]
+>This section needs some fixing particularly with the explanation, and here's why: My rolling circumference based on the wheel/tyre combo I run is 2446 mm. This is all well and good except that the speedometer is accurate while the below value **is not set correctly for that circumference**. I've even reached out to GAP Diagnostic themselves, who have replied back that they "cannot tell honestly as these values are not explained in LR literature. This is why we suggest changing and comparing with a GPS". So if you're gonna mess with tyre sizes outside of the normal spec, well, you're stuck messing with this value and seeing what it does.
+
+The facelift L320 Range Rover Sport (MY10-13) had a really clever way to adjust for the fact that people were putting on different tyre sizes than what the factory sent the cars out with. You could go into the navigation system and choose to perform a rolling calibration. The vehicle would compare the vehicle's speed data with the GPS, and adjust for the tyre's rolling circumference accordingly so your speedometer would be accurate (save for the speedometer inflation factor that was applied after the fact). When using SDD or IID to change the value, the L320 required the rolling circumference to be entered in millimeters.  
 
 **L405 Range Rover**
 |CCF Property|Value|Description|
 |:---|:---|:---|
-| Tyre rolling circumference | [Tyre circumference in MM] | Use a tyre size calculator to determine how tall your wheel and tyre combination is in MM. A 275/40R22 tyre will have a rolling circumference of 2446 mm, so find a value as close to that as possible. |
+| Tyre rolling circumference | [Tyre circumference in MM] | ~~Use a tyre size calculator to determine how tall your wheel and tyre combination is in MM. A 275/40R22 tyre will have a rolling circumference of 2446 mm, so find a value as close to that as possible.~~ Apparently some arbitrary value, see note above. |
 
-Pretty quick and painless.
 
 <br />
 <hr>
