@@ -240,7 +240,7 @@ I'll draw a nice little diagram at some point, but for now:
 - Plug the USB from the GPS amplifier into the voltage converter.
 
 > Note
-> I got some of these details from a user at RangeRovers.net, but their solution was incomplete. They insisted that powering the GPS amplifier was unnecessary as the GPS signal from the vehicle is already amplified, but when I attempted this, the amplifier did nothing whatsoever until I provided it with power (just for testing, I used a USB battery bank). Until I did this, my phone GPS was just as lost as ever, so you need to power the GPS amplifier.
+> I got some of these details from a user at RangeRovers.net, but their solution was incomplete. They insisted that powering the GPS amplifier was unnecessary as the GPS signal from the vehicle is already amplified, but when I attempted this, the amplifier did nothing whatsoever until I provided it with power (just for testing, I used a USB battery bank). You need to power the GPS amplifier. You could run a USB cable directly to one of the vehicle's own USB ports but I wouldn't recommend this and it makes for a far more difficult install.
 
 Once you've wired this up, go for a drive and you should get a nice stable GPS lock and no more weird behavior.
 
