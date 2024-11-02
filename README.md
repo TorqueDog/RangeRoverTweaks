@@ -20,6 +20,8 @@ A small corner of the internet where I document the interesting and useful thing
 
 # List of modifications
 
+
+
 [Firing the Seatbelt Nanny](#firing-the-seatbelt-nanny)
 
 [Letting the air out of Speedometer Inflation](#letting-the-air-out-of-speedometer-inflation)
@@ -29,6 +31,8 @@ A small corner of the internet where I document the interesting and useful thing
 [Adding some athleticism to the big pudding - enabling Dynamic Terrain Response](#adding-some-athleticism-to-the-big-pudding---enabling-dynamic-terrain-response)
 
 [Keep your distance with Adaptive Cruise Control](#keep-your-distance-with-adaptive-cruise-control)
+
+[I installed an aftermarket head unit and my GPS is horribly inaccurate; now what?](#i-installed-an-aftermarket-head-unit-and-my-gps-is-horribly-inaccurate-now-what)
 
 [Experimental and unknowns](#experimental-and-unknowns)
 
@@ -59,7 +63,7 @@ Stupid reasons to make CCF changes:
 <hr>
 <br />
 
-## What tools are required?
+## What tools are required when modifying the CCF?
 
 You have two options:  
 - **SDD** - *Jaguar/Land Rover Symptom Driven Diagnostics* software with a *JLR Mongoose OBD-II* interface  
@@ -203,6 +207,42 @@ CCF edits required (if it doesn't work, re-check these values):
 **Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via independent CCF research, and from places like [RangeRovers.net](https://www.rangerovers.net/forums/range-rover-mark-iv-l405.24/) forums, like the Low Speed Intelligent Emergency Braking option.
 
 Once this is done, you'll need to invoke the ACC calibration process. This is pretty easy to do with IID, SDD might take a bit of hunting around to kick it off. Basically find a nice straight road with a speed of 50 KM/H or higher, keep a good distance between you and the cars in front of you, and drive until the ACC lamp in the instrument cluster stops flashing. That'll signal that the calibration is complete. If you have difficulties, contact GAP Diagnostics themselves and they can help, including flashing a new firmware on the radar unit.
+
+<br />
+<hr>
+<br />
+
+## I installed an aftermarket head unit and my GPS is horribly inaccurate; now what?
+
+You went on Amazon / AliExpress / some other website and you bought either a piggyback or a full screen replacement to get in on that sweet wireless Apple CarPlay and Android Auto action, and perhaps even a nicer screen. It looks so slick and brings the vehicle's otherwise woeful infotainment into the modern era. But when you start using Waze, Apple Maps, Google Maps--... whatever you use -- and have it navigate for you, it goes completely haywire. The vehicle bounces around or shows on the incorrect street, the speed is inconsistent (sometimes you're stopped and the car thinks you've blown through the next two intersections), or -- my personal favourite -- you're powersliding sideways down the highway at 110 KM/H. It's funny the first time, and annoying every other time after.
+
+This is a problem with Range Rovers with solar attenuated glass. The phone is unable to get a GPS lock because the attenuation layer is blocking the signal. This is the same reason why radar detectors don't work well in Range Rovers either unless you tuck them right beside the sun-visor where the solar attentuation layer is not present (you can see it clearly up close).
+
+Thankfully, this is easily dealt with. But first, time to go shopping.
+
+|Part needed|Where / Cost|What it does|
+|:---|:---|:---|
+| Fakra C Male to dual Fakra C Female splitter | [Amazon](https://www.amazon.ca/JAGTRADE-Splitter-Pigtail-Antenna-Extension/dp/B0CS6DSVX1) <br /> $14 CAD | This takes the GPS coaxial that comes in from the vehicle's own GPS antenna and splits it so you can send one to the vehicle's head-unit, and the other to our new GPS amplifier.|
+| Fakra C Male to SMA Male adapter | [Amazon](https://www.amazon.ca/dp/B07MCL8R3G) <br /> $15 CAD | Connect this to the free end of the Fakra splitter above, and connect it to the GPS amplifier. |
+| GPS Signal Amplifier and Receiver | [eBay](https://www.ebay.com/itm/195879327702) <br /> $26 CAD | This receives the GPS signal from the vehicle's onboard GPS antenna and amplifies it. This contains both an amplifier (SMA female coax wire and USB cable) and antenna (one SMA male coax wire), but we are **only** using the amplifier. |
+| 12V to USB 5V step down voltage converter | [Amazon](https://www.amazon.ca/dp/B07V6158V3) <br /> $18 CAD | This is what we'll use to power the GPS amplifier. |
+| Add-a-Circuit Micro2 fuse taps | [Amazon](https://www.amazon.ca/dp/B08S78VD5H) <br /> $12 CAD | We'll use the fuse-taps to tap in to an existing ignition-switched load in the passenger compartment fuse box, behind the lower glove box. |
+
+I'll draw a nice little diagram at some point, but for now:
+- Find somewhere convenient to mount the GPS signal amplifier. Remeber, this is the little black puck with both an SMA female cable and a USB cable. I mounted mine behind the trim that you remove to remove/install the infotainment screen.
+- Connect the male end of the Fakra splitter to the vehicle's GPS that is currently connected to the head unit.
+- Connect one female end of the Fakra splitter to the vehicle head unit.
+- Connect the other female end of the Fakra splitter to the Fakra to SMA adapter.
+- Connect the SMA adapter end to the GPS signal amplifier's SMA female cable.
+- Route the amplifier's USB cable behind the head unit and screen over to the fuse box behind the lower glove box.
+- Wire the voltage converter's red (positive) wire to a fuse-tap lead and find a chassis ground near the glove box to affix the black (negative) ground wire to. Make sure the ground wire is secure!
+- Find an ignition switched load to add the fuse tap. I try to find non-critical loads that already use 5A fuses so we don't overload the circuit.
+- Plug the USB from the GPS amplifier into the voltage converter.
+
+> Note
+> I got some of these details from a user at RangeRovers.net, but their solution was incomplete. They insisted that powering the GPS amplifier was unnecessary as the GPS signal from the vehicle is already amplified, but when I attempted this, the amplifier did nothing whatsoever until I provided it with power (just for testing, I used a USB battery bank). Until I did this, my phone GPS was just as lost as ever, so you need to power the GPS amplifier.
+
+Once you've wired this up, go for a drive and you should get a nice stable GPS lock and no more weird behavior.
 
 <br />
 <hr>
