@@ -311,7 +311,7 @@ So far I have done some testing on this; when 'Lane keep assist' is set to **Fit
 |:---|:---|:---|
 | Night vision | Not fitted | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
 
-Who *wouldn't* want Night Vision?! The W221 Mercedes S-Class in the UK had optional infrared night vision (Top Gear, Series 8 Episode 4), there has to be something to this value being available in the CCF. This needs more investigation.
+This one doesn't seem to do anything in my testing. My L405 has the surround cameras, and when it's dark out, I can turn on the front camera and the camera goes into an infrared mode similar to what the reverse camera does when it's dark out. It did that irrespective of what this setting is. I mean hey, at least we have night vision! It would be cool to have a secondary night vision camera that is roughly at windshield height though.
 
 **Deployable sidesteps / Retractable running board**
 
