@@ -34,6 +34,8 @@ A small corner of the internet where I document the interesting and useful thing
 
 [I installed an aftermarket head unit and my GPS is horribly inaccurate; now what?](#i-installed-an-aftermarket-head-unit-and-my-gps-is-horribly-inaccurate-now-what)
 
+[My butt is burning - how to change the heated seat temperature targets](#my-butt-is-burning---how-to-change-the-heated-seat-temperature-targets)
+
 [Experimental and unknowns](#experimental-and-unknowns)
 
 <hr>
@@ -243,6 +245,20 @@ I'll draw a nice little diagram at some point, but for now:
 > I got some of these details from a user at RangeRovers.net, but their solution was incomplete. They insisted that powering the GPS amplifier was unnecessary as the GPS signal from the vehicle is already amplified, but when I attempted this, the amplifier did nothing whatsoever until I provided it with power (just for testing, I used a USB battery bank). You need to power the GPS amplifier. You could run a USB cable directly to one of the vehicle's own USB ports but I wouldn't recommend this and it makes for a far more difficult install.
 
 Once you've wired this up, go for a drive and you should get a nice stable GPS lock and no more weird behavior.
+
+<br />
+<hr>
+<br />
+
+## My butt is burning - how to change the heated seat temperature targets
+
+There's a value that allows you to change the temperature range of your seat heaters. It's a universal value and will affect both front and rear heaters.
+
+|CCF Property|(My) Default Value|Possible Values|
+|:---|:---|:---|
+| Seat heat calibration | Low temperature 36Â°C - High temperature 43Â°C | &bull; Undefined <br /> &bull; Without seat heating <br /> &bull; Low temperature 28Â°C - High temperature 35Â°C <br /> &bull; Low temperature 30Â°C - High temperature 36Â°C <br /> &bull; Low temperature 30Â°C - High temperature 37Â°C <br /> &bull; Low temperature 31Â°C - High temperature 37Â°C <br /> &bull; Low temperature 31Â°C - High temperature 38Â°C <br /> &bull; Low temperature 32Â°C - High temperature 38Â°C <br /> &bull; Low temperature 33Â°C - High temperature 39Â°C <br /> &bull; Low temperature 34Â°C - High temperature 40Â°C <br /> &bull; Low temperature 35Â°C - High temperature 41Â°C <br /> &bull; Low temperature 36Â°C - High temperature 43Â°C <br /> &bull; Low temperature 40Â°C - High temperature 46Â°C <br />|
+
+Before you go cranking this from the default to the maximum Low 40°C - High 46°C, you should know that when I did this, it simply disabled the seat heaters; the Climate module threw a fault code saying that its configuration was incorrect, and I could no longer turn on the seat heaters (or seat ventilation) for front or rear passengers. I had to set the value back to my default and clear the code, then restart the vehicle for it to work again. So while you can likely use this property to back off the seat heaters if they're *too hot* for you, if you want to feel the heat of an Arizona summer on your backside, the value that allows for 46°C is not likely going to work, just stick with the 43°C max.
 
 <br />
 <hr>
