@@ -36,6 +36,8 @@ A small corner of the internet where I document the interesting and useful thing
 
 [My butt is burning - how to change the heated seat temperature targets](#my-butt-is-burning---how-to-change-the-heated-seat-temperature-targets)
 
+[Auto apply the parking brake at key off](#auto-apply-the-parking-brake-at-key-off)
+
 [Experimental and unknowns](#experimental-and-unknowns)
 
 <hr>
@@ -245,6 +247,21 @@ I'll draw a nice little diagram at some point, but for now:
 > I got some of these details from a user at RangeRovers.net, but their solution was incomplete. They insisted that powering the GPS amplifier was unnecessary as the GPS signal from the vehicle is already amplified, but when I attempted this, the amplifier did nothing whatsoever until I provided it with power (just for testing, I used a USB battery bank). You need to power the GPS amplifier. You could run a USB cable directly to one of the vehicle's own USB ports but I wouldn't recommend this and it makes for a far more difficult install.
 
 Once you've wired this up, go for a drive and you should get a nice stable GPS lock and no more weird behavior.
+
+<br />
+<hr>
+<br />
+
+## Auto apply the parking brake at key-off
+
+Live in San Francisco or somewhere with excessive inclines and declines and need to use the parking brake more often than usual? You can program the vehicle to set it as soon as you turn off the vehicle.
+
+|CCF Property|Desired value|Possible values|
+|:---|:---|:---|
+| Electronic park brake key out apply | Key out apply | &bull; Undefined <br /> &bull; Without key out apply <br /> &bull; Key out apply |
+
+Yes, it's called "key out" but we have proximity keys, there is no _key out_. When you put the vehicle into any directional gear, the electronic park brake will automatically disengage. I personally kept this one off. It isn't really necessary for me.
+
 
 <br />
 <hr>
