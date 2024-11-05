@@ -239,7 +239,7 @@ I'll draw a nice little diagram at some point, but for now:
 - Connect the other female end of the Fakra splitter to the Fakra to SMA adapter.
 - Connect the SMA adapter end to the GPS signal amplifier's SMA female cable.
 - Route the amplifier's USB cable behind the head unit and screen over to the fuse box behind the lower glove box.
-- Wire the voltage converter's red (positive) wire to a fuse-tap lead and find a chassis ground near the glove box to affix the black (negative) ground wire to. Make sure the ground wire is secure!
+- Wire the voltage converter's red (positive) wire to a fuse-tap lead and find a chassis ground near the glove box to affix the black (negative) ground wire to (behind the trim tucked under the door weatherstripping is a good location). Make sure the ground wire is secure!
 - Find an ignition switched load to add the fuse tap. I try to find non-critical loads that already use 5A fuses so we don't overload the circuit.
 - Plug the USB from the GPS amplifier into the voltage converter.
 
