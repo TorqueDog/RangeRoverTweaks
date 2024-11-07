@@ -202,15 +202,21 @@ CCF edits required (if it doesn't work, re-check these values):
 | Forward Collision Warning | Fitted |
 | Forward Collision Warning | Forward collision warning GEN 3 - Level 2* |
 | Front Crash Sensing System | Front crash sensing system – Upfront sensor |
-| Low speed intelligent emergency braking *optional | Fitted |
-| Low speed intelligent emergency braking *optional | Front and Rear |
-| Intelligent cruise control | Fitted |
 | Standard Speed Control Display Type | Adaptive speed control full display plus priority messages |
 
 *Your vehicle may not show 'Level 2'. Just pick the same value so long as it says "GEN 3".  
-**Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via independent CCF research, and from places like [RangeRovers.net](https://www.rangerovers.net/forums/range-rover-mark-iv-l405.24/) forums, like the Low Speed Intelligent Emergency Braking option.
 
 Once this is done, you'll need to invoke the ACC calibration process. This is pretty easy to do with IID, SDD might take a bit of hunting around to kick it off. Basically find a nice straight road with a speed of 50 KM/H or higher, keep a good distance between you and the cars in front of you, and drive until the ACC lamp in the instrument cluster stops flashing. That'll signal that the calibration is complete. If you have difficulties, contact GAP Diagnostics themselves and they can help, including flashing a new firmware on the radar unit.
+
+Optional settings:
+
+|CCF Property|Value|
+|:---|:---|
+| Low speed intelligent emergency braking | Fitted |
+| Low speed intelligent emergency braking | Front and Rear |
+
+**Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via independent CCF research, and from places like [RangeRovers.net](https://www.rangerovers.net/forums/range-rover-mark-iv-l405.24/) forums, like the Low Speed Intelligent Emergency Braking option.
+
 
 <br />
 <hr>
