@@ -198,25 +198,33 @@ CCF edits required (if it doesn't work, re-check these values):
 | Adaptive Speed Control ECU | North America, Canada, Mexico, Australia |
 | Adaptive Speed Control ECU | Standard blockage level -40dB |
 | Collision Mitigation By Braking | Fitted |
-| Collision Mitigation By Braking | Collision mitigation by braking GEN 3 - Level 2* |
+| Collision Mitigation By Braking | Collision mitigation by braking GEN 3 |
 | Forward Collision Warning | Fitted |
-| Forward Collision Warning | Forward collision warning GEN 3 - Level 2* |
+| Forward Collision Warning | Forward collision warning GEN 3 |
 | Front Crash Sensing System | Front crash sensing system – Upfront sensor |
 | Standard Speed Control Display Type | Adaptive speed control full display plus priority messages |
 
-*Your vehicle may not show 'Level 2'. Just pick the same value so long as it says "GEN 3".  
+Once this is done, you'll need to invoke the ACC calibration process. This is pretty easy to do with IID, SDD might take a bit of hunting around to kick it off. Basically find a nice straight road with a speed of 50 KM/H or higher and minimal traffic (keep a good distance between you and the cars in front of you if there are other cars out there), pick the lane closest to the curb with all the signage and such, and drive until the ACC lamp in the instrument cluster stops flashing. That'll signal that the calibration is complete. The radar is looking for stationary objects like lamp posts and signage to calibrate itself.
 
-Once this is done, you'll need to invoke the ACC calibration process. This is pretty easy to do with IID, SDD might take a bit of hunting around to kick it off. Basically find a nice straight road with a speed of 50 KM/H or higher, keep a good distance between you and the cars in front of you, and drive until the ACC lamp in the instrument cluster stops flashing. That'll signal that the calibration is complete. If you have difficulties, contact GAP Diagnostics themselves and they can help, including flashing a new firmware on the radar unit.
+If you have difficulties, contact GAP Diagnostics themselves and they can help, including flashing a new firmware on the radar unit if need be.
 
-Optional settings:
+Variation in available values that aren't yet understood:
+|CCF Property|Value|Notes|
+|:---|:---|:---|
+| Speed Control | &bull; Adaptive speed control, stop and go <br /> &bull; Adaptive speed control, brake limit 2 <br /> &bull; Adaptive speed control, stop and go, brake limit 2 | It's unknown at this time what 'brake limit 2' does or adds to the functionality here. |
+| Front Crash Sensing System | &bull; Front crash sensing system – Upfront sensor <br /> &bull; Front crash sensing system – Closing velocity <br /> &bull; Front crash sensing system – Upfront sensor and closing velocity | It's unknown at this time what the addition of 'closing velocity' does to this feature, and given the inability to test it without putting myself in harm's way, I am unsure I'll get an answer. |
+| Collision Mitigation By Braking | &bull; Collision mitigation by braking GEN 3 <br /> &bull; Collision mitigation by braking GEN 3 – Level 2 | The question here is "What's the difference between GEN 3 – Level 2 and plain ol' GEN 3" and at this time I'm unsure. Again, the inability to test such a feature without trying to rear end the car in front of me will slow getting clarity here. |
 
+Features that work in conjunction with ACC radar units:
+
+**Low speed intelligent emergency braking (IEB)**
 |CCF Property|Value|
 |:---|:---|
 | Low speed intelligent emergency braking | Fitted |
 | Low speed intelligent emergency braking | Front and Rear |
+>[NOTE] When I enabled these settings on my L405, once the CCF writing was complete, I immediately got a 'Park Brake Fault' error in the cluster. Weirdly, the parking brake worked just fine and would engage and disengage without issue, but the vehicle insisted there was something wrong with it. I suspect there is a requisite hardware component missing in my L405's build for IEB that causes the vehicle to report that fault.
 
-**Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via independent CCF research, and from places like [RangeRovers.net](https://www.rangerovers.net/forums/range-rover-mark-iv-l405.24/) forums, like the Low Speed Intelligent Emergency Braking option.
-
+**Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via independent CCF research, and from places like [RangeRovers.net](https://www.rangerovers.net/forums/range-rover-mark-iv-l405.24/) forums.
 
 <br />
 <hr>
