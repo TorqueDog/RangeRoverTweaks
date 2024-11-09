@@ -211,9 +211,9 @@ If you have difficulties, contact GAP Diagnostics themselves and they can help, 
 Variation in available values that aren't yet understood:
 |CCF Property|Value|Notes|
 |:---|:---|:---|
-| Speed Control | &bull; Adaptive speed control, stop and go <br /> &bull; Adaptive speed control, brake limit 2 <br /> &bull; Adaptive speed control, stop and go, brake limit 2 | It's unknown at this time what 'brake limit 2' does or adds to the functionality here. |
-| Front Crash Sensing System | &bull; Front crash sensing system – Upfront sensor <br /> &bull; Front crash sensing system – Closing velocity <br /> &bull; Front crash sensing system – Upfront sensor and closing velocity | It's unknown at this time what the addition of 'closing velocity' does to this feature, and given the inability to test it without putting myself in harm's way, I am unsure I'll get an answer. |
-| Collision Mitigation By Braking | &bull; Collision mitigation by braking GEN 3 <br /> &bull; Collision mitigation by braking GEN 3 – Level 2 | The question here is "What's the difference between GEN 3 – Level 2 and plain ol' GEN 3" and at this time I'm unsure. Again, the inability to test such a feature without trying to rear end the car in front of me will slow getting clarity here. |
+| Speed Control | &bull; Adaptive speed control, stop and go <br /> &bull; Adaptive speed control, brake limit 2 <br /> &bull; Adaptive speed control, stop and go, brake limit 2 | It's unknown at this time what 'brake limit 2' does or adds to the functionality here. I've set mine to '[...] stop and go, brake limit 2' and have no observed any difference in behaviour. |
+| Front Crash Sensing System | &bull; Front crash sensing system – Upfront sensor <br /> &bull; Front crash sensing system – Closing velocity <br /> &bull; Front crash sensing system – Upfront sensor and closing velocity | It's unknown at this time what the addition of 'closing velocity' does to this feature. Mine is set to 'Upfront sensor and closing velocity' and no errors or faults have occurred. |
+| Collision Mitigation By Braking | &bull; Collision mitigation by braking GEN 3 <br /> &bull; Collision mitigation by braking GEN 3 – Level 2 | The question here is "What's the difference between GEN 3 – Level 2 and plain ol' GEN 3" and at this time I'm unsure. The inability to test such a feature without trying to rear end the car in front of me will slow getting clarity here. Mine is set to "Level 2" with no fault codes thrown. |
 
 Features that work in conjunction with ACC radar units:
 
@@ -222,7 +222,7 @@ Features that work in conjunction with ACC radar units:
 |:---|:---|
 | Low speed intelligent emergency braking | Fitted |
 | Low speed intelligent emergency braking | Front and Rear |
->[NOTE] When I enabled these settings on my L405, once the CCF writing was complete, I immediately got a 'Park Brake Fault' error in the cluster. Weirdly, the parking brake worked just fine and would engage and disengage without issue, but the vehicle insisted there was something wrong with it. I suspect there is a requisite hardware component missing in my L405's build for IEB that causes the vehicle to report that fault.
+>[NOTE] When I enabled these settings on my L405, once the CCF writing was complete, I immediately got a 'Park Brake Fault' error in the cluster. Weirdly, the parking brake worked just fine and would engage and disengage without issue, but the vehicle insisted there was something wrong with it. I suspect there is a requisite hardware component missing in my L405's build for IEB that causes the vehicle to report that fault, or another CCF property that IEB is dependent on to work properly.
 
 **Some of these values are directly from GAP Diagnostic's FAQ, thank you to GAP for publishing them. Others were added via independent CCF research, and from places like [RangeRovers.net](https://www.rangerovers.net/forums/range-rover-mark-iv-l405.24/) forums.
 
@@ -343,11 +343,11 @@ Here's the list of things I've identified in the CCF and -- if I've tried them -
 |:---|:---|:---|
 | Lane keep assist | Not supported | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
 
-_Whaaaaa...?_ Lane Keep Assist is officially available on the 2018+ L405 models, which also have the option of a Cruise Steering Assist (CSA) mode. If you're familiar with Lane Departure Warning, LKA is the same thing except the vehicle will also gently steer itself back into the lane, as well as vibrate the steering wheel. This is described as sort of a 'ping pong'-type behavior where the vehicle doesn't have any intelligence in keeping the vehicle in the middle of the lane, it just stops you leaving your lane. On the other hand, CSA will try to keep the vehicle steering relatively straight and true in the lane, and will even negotiate gentle curves in the roadway without any input from the driver. 
+_Whaaaaa...?_ Lane Keep Assist is officially available on the 2017+ L405 models (and 2018+ models also have the option of a Cruise Steering Assist (CSA) mode). If you're familiar with Lane Departure Warning, LKA is the same thing except the vehicle will _also_ gently steer itself back into the lane, as well as vibrate the steering wheel. This is described as sort of a 'ping pong'-type behavior where the vehicle doesn't have any intelligence in keeping the vehicle in the middle of the lane, it just stops you leaving your lane. On the other hand, CSA will try to keep the vehicle steering relatively straight and true in the lane, and will even negotiate gentle curves in the roadway without any input from the driver. 
 
-The **Not supported** default value originally didn't give me much hope, but my L405's manual does make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF despite it not being released into production a full two model years after the release of my 2016. 
+The **Not supported** default value originally didn't give me much hope, but my MY16.5 L405's manual _does_ make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF all the same. 
 
-So far I have done some testing on this; when 'Lane keep assist' is set to **Fitted** but ACC has **not** been fitted / configured per the above, LKA does not work but LDW continues to function normally. Once ACC has been enabled and calibrated, I will perform the LKA test once more.
+So far in my testing on this, when 'Lane keep assist' is set to **Fitted**, there is still no LKA option in the cluster and LKA does not work, but LDW continues to function normally. This is the case both with and without ACC enabled.
 
 <br />
 <hr>
@@ -358,7 +358,7 @@ So far I have done some testing on this; when 'Lane keep assist' is set to **Fit
 |:---|:---|:---|
 | Night vision | Not fitted | &bull; Not supported <br /> &bull; Not fitted <br /> &bull; Fitted <br /> &bull; Error |
 
-This one doesn't seem to do anything in my testing. My L405 has the surround cameras, and when it's dark out, I can turn on the front camera and the camera goes into an infrared mode similar to what the reverse camera does when it's dark out. It did that irrespective of what this setting is. I mean hey, at least we have night vision! It would be cool to have a secondary night vision camera that is roughly at windshield height though.
+This one doesn't seem to do anything in my testing. My L405 has the surround cameras, and when it's dark out, I can turn on the front camera and the camera goes into an infrared mode similar to what the reverse camera does when it's dark out. It did that irrespective of what this setting is. I mean hey, at least we have some sort of night vision! It would be cool to have a secondary night vision camera that is roughly at windshield height though, and one that displays in the driver's cluster instead of the center screen.
 
 **Deployable sidesteps / Retractable running board**
 
@@ -420,7 +420,9 @@ No clue what the different variants do, but I'm quite curious. Will be updated o
 |:---|:---|:---|
 | Service interval | Undefined | &bull; Undefined <br /> &bull; User defined service interval <br /> &bull; Service interval 1 - 15000 km <br /> &bull; Service interval 2 - 7500 miles <br /> ... and so on. |
 
-To be blunt, I think Land Rover's recommended / default servicing interval for these things is absurdly long, and I would happily define my own service interval around or between 5,000 - 10,000 km. Strangely, my service interval in the CCF is set to 'Undefined' but I'm quite certain it is counting down from the factory 24,000 km interval. I don't know if changing these does much, if anything.
+To be blunt, I think Land Rover's recommended / default servicing interval for these things is absurdly long, and I would happily define my own service interval around or between 5,000 - 10,000 km. Strangely, my service interval in the CCF is set to 'Undefined' but I'm quite certain it is counting down from the factory 26,000 km (!!!) interval. I tried changing this to a lower value (5,000 KM) but it did not have any influence on what the vehicle thinks is the service interval.
+
+26,000 KM, no wonder people have problems with these bloody things.
 
 
 <br />
