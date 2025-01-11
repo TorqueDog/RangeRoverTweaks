@@ -345,9 +345,21 @@ Here's the list of things I've identified in the CCF and -- if I've tried them -
 
 _Whaaaaa...?_ Lane Keep Assist is officially available on the 2017+ L405 models (and 2018+ models also have the option of a Cruise Steering Assist (CSA) mode). If you're familiar with Lane Departure Warning, LKA is the same thing except the vehicle will _also_ gently steer itself back into the lane, as well as vibrate the steering wheel. This is described as sort of a 'ping pong'-type behavior where the vehicle doesn't have any intelligence in keeping the vehicle in the middle of the lane, it just stops you leaving your lane. On the other hand, CSA will try to keep the vehicle steering relatively straight and true in the lane, and will even negotiate gentle curves in the roadway without any input from the driver. 
 
-The **Not supported** default value originally didn't give me much hope, but my MY16.5 L405's manual _does_ make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF all the same. 
+The **Not supported** default value originally didn't give me much hope, but my MY16.5 L405's manual _does_ make specific reference to it being an option and -- given a vehicle with Park Assist (ability for the vehicle to move the steering wheel itself) plus ACC and LDW -- it is curious that it is present in the CCF all the same, though this is likely due to Jaguar already having this as a RPO in their models. 
 
-So far in my testing on this, when 'Lane keep assist' is set to **Fitted**, there is still no LKA option in the cluster and LKA does not work, but LDW continues to function normally. This is the case both with and without ACC enabled.
+When 'Lane keep assist' is set to **Fitted** on my own L405, there is still no LKA option in the cluster and LKA does not work, but LDW continues to function normally. This is the case both with and without ACC enabled. Prior to MY2017, L405 didn't have the stereo camera IPMA module fitted at any point in its production as far as I can tell.
+
+Hypothetically, an attempted retrofit would require -- at minimum -- the following components be procured and installed or replaced:
+- windshield, upgraded to a MY2017 part
+- rear-view mirror
+- pre-DoIP IPMA Premium module (must be 'Premium' not 'Enhanced'; 2016 Jag X260 would be a suitable donor)
+
+This makes some heavy assumptions:
+- updated MY2017 windshield will fit (physically, it should)
+- IPMA Premium harness even exists in an L405 and/or the pigtail can be fitted to the main harness
+- IPMA Premium module from a pre-DoIP Jaguar that has LKA will communicate successfully
+
+Seems like a long shot, but unless someone who makes a living from YouTube wants to give it a try, this one will likely stay a theoretical possibility rather than a proven option.
 
 <br />
 <hr>
