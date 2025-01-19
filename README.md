@@ -36,6 +36,8 @@ A small corner of the internet where I document the interesting and useful thing
 
 [My butt is burning - how to change the heated seat temperature targets](#my-butt-is-burning---how-to-change-the-heated-seat-temperature-targets)
 
+[Chill out, bro! - enabling Timed Climate](#chill-out-bro-enabling-timed-climate)
+
 [Auto apply the parking brake at key off](#auto-apply-the-parking-brake-at-key-off)
 
 [Experimental and unknowns](#experimental-and-unknowns)
@@ -265,6 +267,48 @@ Once you've wired this up, go for a drive and you should get a nice stable GPS l
 <br />
 <hr>
 <br />
+
+## Chill out, bro! - Enabling Timed Climate
+
+In European markets, Land Rover equipped L405 models -- typically diesels -- with timed climate and fuel burning parking heaters with remotes, which is a brilliant idea. In North America, we largely got nothing (until much later in the L405 production run), presumably due to the fear that some idiot was going to freeze himself to death relying on the park heater, and a wrongful death suit would be forthcoming. Being upstairs neighbours with the most litigious country in the world has its drawbacks, as Canada would have been an ideal place to sell the petrol version of the fuel-burning park heater option.
+
+The park heater isn't a huge loss for me, personally; I typically try to park indoors -- out of the harsh elements -- but the reality is that isn't always going to be an option. Plus, winter isn't the only consideration, it gets hot in Canada during the summer. I had an E39 BMW M5 that had a 'Rest' function in the HVAC that would allow the driver to set the ventilation system to cool the car down for about half an hour. It could -- if I remember correctly -- be scheduled, *timed*. This clever BMW feature found its way into the Range Rover L322, which was designed during Munich's ownership of Land Rover from 1994 to 2000, and used a good deal of BMW electronics. If you're me -- driving a Santorini black L405 with black Windsor hides, black headlining, and piano black veneers in a hot Canadian summers, no amount of solar attenuated glass nor the trick automatic sunroof shade is going to help the fact that it's gonna be *hot* in that interior if you leave it parked in the mid-day sun for five hours.
+
+While we can't get park _heat_ working without spending a thousand bucks or more, there are -- thankfully -- some elements of this system that require no additional hardware to operate: Timed Climate. And with timed climate, we can at least get scheduled _ventilation_.
+
+It should be pointed out that this is **just ventilation**, not actual 'cooling'. The engine isn't running, the A/C compressor isn't spinning, there's no refrigerant involved here. This is just get the cooler air from outside the vehicle in, and expel the hot air inside the greenhouse known as your Range Rover.
+
+**Enabling Timed Climate**
+|CCF Property|Value|Where found|
+|:---|:---|:---|
+| FBH Call Start | Radio | Confirmed CCF - BCM Body Control |
+| Fuel Burning Heater | Fuel fired parking heater (FFPH) | Confirmed CCF - BCM Body Control
+| Timed Climate | Fitted | Confirmed CCF - BCM Body Control |
+| Callstart of parking heater | Callstart of parking heater - Accessory only (via radio) | Complete CCF (Untested) |
+>[NOTE] When I enabled these settings on my L405, my Ventilation ECU would show a fault that the fuel burning park heater was not responsive; this is normal and will persist, but Timed Climate will show up and work.
+
+Once this completed, you'll see some changes:
+- a new button in the Climate screen called 'Rest heat'. This is perpetually greyed out for me, I will check again when I'm actually parked somewhere that it's bloody cold out, but in my 19 degree Celsius parking garage with the engine fully warmed up, this remained greyed out.
+- from the main infotainment menu, navigate to the 'Extras' pane and you should see there is an extra page. Go to it and all by its lonesome -- depending on what other options you have -- you will see Timed Climate.
+
+In the Timed Climate menu, you'll see the two different timer options and the following buttons:
+- 7 Day Timer
+- Single event
+- Manual heat
+- Manual vent
+- Timer
+- Stop Event
+
+'Manual heat' and 'Manual vent' are greyed out for me, just like 'Rest heat' in the Climate screen. I tried with engine off, on, nothing. I'll update if I ever get an idea of what needs to fall into place for these to work.
+
+There are two ways to use Timed Climate:
+- 7 Day Timer - Allows you to set two different timer reschedules from Sunday to Saturday. Let's say you start driving to work at 07:30 and driving home at 17:00, you can set your two 7 day timer schedules to 07:00 and 16:30 daily, so your vehicle will start venting and cooling itself down 30 minutes before you start driving to work.
+- Single event - Let's say you're going to an outdoor event that you know ends at 16:30 -- set your single event to today's date and 16:00 and the vehicle will do the rest. You can even set this to a date in the future, though I'm not sure I'm that much of a planner that I could use it that way.
+
+Select the one you want and press the 'Timer(s)' button to configure when you want to run Timed Climate venting. In theory, this should also  enable maintaining the cabin's temperature in cold climates through residual engine heat, but I haven't tested this and depending how cold it is, who knows how effective it'll be.
+
+When Timed Climate is configured, you'll see the 'Auto' light flash on the driver's side of the HVAC controls when set (assuming you have the physical buttons) and the A/C lamp slow blink continuously while Timed Climate is in operation.
+
 
 ## Auto apply the parking brake at key-off
 
