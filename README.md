@@ -278,6 +278,7 @@ While we can't get park _heat_ working without spending a thousand bucks or more
 
 It should be pointed out that this is **just ventilation**, not actual 'cooling'. The engine isn't running, the A/C compressor isn't spinning, there's no refrigerant involved here. This is just get the cooler air from outside the vehicle in, and expel the hot air inside the greenhouse known as your Range Rover.
 
+
 **Enabling Timed Climate**
 |CCF Property|Value|Where found|
 |:---|:---|:---|
@@ -309,6 +310,9 @@ Select the one you want and press the 'Timer(s)' button to configure when you wa
 
 When Timed Climate is configured, you'll see the 'Auto' light flash on the driver's side of the HVAC controls when set (assuming you have the physical buttons) and the A/C lamp slow blink continuously while Timed Climate is in operation.
 
+<br />
+<hr>
+<br />
 
 ## Auto apply the parking brake at key-off
 
