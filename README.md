@@ -36,7 +36,7 @@ A small corner of the internet where I document the interesting and useful thing
 
 [My butt is burning - how to change the heated seat temperature targets](#my-butt-is-burning---how-to-change-the-heated-seat-temperature-targets)
 
-[Chill out, bro! - enabling Timed Climate](#chill-out-bro-enabling-timed-climate)
+[Chill out, bro! - Enabling Timed Climate](#chill-out-bro---enabling-timed-climate)
 
 [Auto apply the parking brake at key off](#auto-apply-the-parking-brake-at-key-off)
 
